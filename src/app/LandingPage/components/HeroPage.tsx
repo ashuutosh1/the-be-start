@@ -7,8 +7,8 @@ import HeroLogo from './HeroLogo';
 function HeroPage() {
   return (
     <>
-      <div className="pt-32 max-lg:pt-24"></div>
-      <div className="lg:flex flex-wrap justify-between pb-20 xl:px-60 lg:px-40 md:10 sm:px-10">
+      <div className="pt-32 max-lg:pt-20"></div>
+      <div className="h-screen lg:flex flex-wrap justify-between pb-20 xl:px-60 lg:px-40 md:10 sm:px-10">
 
          {/*----- Logo Section ----- */}
          <div className='flex-1 items-center md:justify-center'>

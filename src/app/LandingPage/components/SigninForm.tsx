@@ -9,7 +9,7 @@ export default function SignInForm() {
                     <h1 className="mb-4 text-2xl font-bold dark:text-white">Login</h1>
                     <div>
                       <div className="mb-2">
-                        <label className="text-sm font-medium text-gray-900 dark:text-gray-300" htmlFor="email">
+                        <label className="text-sm font-bold text-gray-900 dark:text-gray-300" htmlFor="email">
                           Email:
                         </label>
                       </div>
@@ -29,7 +29,7 @@ export default function SignInForm() {
 
                     <div>
                       <div className="mb-2">
-                        <label className="text-sm font-medium text-gray-900 dark:text-gray-300" htmlFor="password">
+                        <label className="text-sm font-bold text-gray-900 dark:text-gray-300" htmlFor="password">
                           Password
                         </label>
                       </div>
@@ -45,7 +45,7 @@ export default function SignInForm() {
                           />
                         </div>
                       </div>
-                      <p className="mt-2 cursor-pointer  hover:text-purple-600">Forgot password?</p>
+                      <p className="mt-2 cursor-pointer text-sm hover:text-purple-600">Forgot password?</p>
                     </div>
 
                     <div className="flex flex-col gap-2">

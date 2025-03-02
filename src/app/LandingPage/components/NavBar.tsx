@@ -11,16 +11,16 @@ import Link from 'next/link';
 function NavBar() {
   return (
     <> 
-        <section className='py-4 px-8 lg:px-40 z-40 fixed w-full backdrop-filter backdrop-blur-lg bg-black bg-opacity-50 '>
+        <section className='py-4 px-8 lg:px-40 max-lg:px-20 z-40 fixed w-full backdrop-filter backdrop-blur-lg bg-black bg-opacity-50 '>
          <div className='container rounded-full '>
-              <div className='grid grid-cols-2 border border-white/10 rounded-full p-2 px-4 items-center'>
-                <div>
+              <div className='flex justify-between w-full border border-white/10 rounded-full p-2 px-4 items-center'>
+                <div className=''>
                   <Image src={BemaxoLogo} alt='Bemaxo logo' className='h-9 md:h-12 w-auto'></Image>
                 </div>
-                <div className='flex justify-end '>
+                <div className=''>
                   <IoMenu className='text-white text-2xl md:hidden'/>
                   <div className='max-md:hidden flex gap-4'>
-                    <Link href="#" className='flex items-center justify-center h-12 rounded-full px-2 font-bold hover:text-purple-600'>
+                    <Link href="#" className='flex max-lg:hidden items-center justify-center h-12 rounded-full px-2 font-bold hover:text-purple-600'>
                        <button className='flex gap-2 '><MdOutlineExplore className='text-2xl' />
                         Explore
                         </button>
