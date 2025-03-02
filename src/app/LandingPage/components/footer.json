@@ -1,0 +1,11 @@
+{
+    "links": [
+      { "name": "About", "url": "/about" },
+      { "name": "Privacy Policy", "url": "/privacy-policy" },
+      { "name": "Terms and Conditions", "url": "/licensing" },
+      { "name": "Copyright Issue", "url": "/copyright" },
+      { "name": "Report Bug", "url": "/reportbug" },
+      { "name": "Help", "url": "/help" }
+    ]
+  }
+  
