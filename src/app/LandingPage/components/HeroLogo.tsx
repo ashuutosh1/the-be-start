@@ -18,7 +18,7 @@ function HeroLogo() {
                     Bringing People and Worlds Together.
             </div>
             <div className="flex items-center justify-center">
-                <button className="flex lg:px-10 max-lg:px-6 max-sm:px-4 py-6 max-lg:py-4 bg-purple-600 hover:bg-gray-200 hover:text-black hover:border-2 border-purple-600 rounded-full font-bold gap-2 ">
+                <button className="flex lg:px-6 max-lg:px-6 max-sm:px-4 py-4 max-lg:py-2 bg-purple-600 hover:bg-gray-200 hover:text-black rounded-full font-bold gap-2 ">
                       <MdOutlineExplore className="text-2xl" />
                     <span>Explore</span>
                 </button>

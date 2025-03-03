@@ -1,56 +1,55 @@
-import React from "react";
-import Image from "next/image";
 import Link from "next/link";
-import BemaxoLogo from "../../../../public/Landing-assets/light-theme-logo.png";
-import footerData from "../components/footer.json"; // Adjust path if needed
-import { IoMailUnreadOutline } from "react-icons/io5";
-import { FaXTwitter } from "react-icons/fa6";
+import Image from "next/image";
+import PlayStore from "../../../../public/Landing-assets/playstore-logo.png"
+import AppleStore from "../../../../public/Landing-assets/applestore-logo.png"
 
 const Footer = () => {
   return (
-    <footer className="m-4">
-      <div className="max-w-screen-xl mx-auto p-4 md:py-8">
-        <div className="sm:flex sm:items-center sm:justify-between">
-          <a
-            href="https://bemaxo.com/"
-            className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
-          >
-            <Image src={BemaxoLogo} className="w-16 h-auto" alt="Bemaxo Logo" />
-           
-          </a>
-
-          {/* Dynamic Footer Links from JSON */}
-          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-            {footerData.links.map((link, index) => (
-              <li key={index}>
-                <Link href={link.url} className="hover:underline me-4 md:me-6">
-                {" | "}
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
+    <div className="mt-10">
+      <div className="max-w-4xl mx-auto text-white py-10">
+        <div className="text-center">
+          <div className="flex max-sm:flex-col max-sm:gap-10 items-center justify-center my-10">
+            <div className="flex items-center border rounded-lg px-4 py-2 min-w-52 mx-2">
+              <Image
+                src={PlayStore}
+                className="w-7 md:w-8"
+                alt="Google Play"
+              />
+              <div className="text-left ml-3">
+                <p className="text-xs text-gray-200">Download on</p>
+                <p className="text-sm md:text-base">Google Play Store</p>
+              </div>
+            </div>
+            <div className="flex items-center border rounded-lg px-4 py-2 min-w-52 mx-2">
+              <Image
+                src={AppleStore}
+                className="w-7 md:w-8"
+                alt="Apple Store"
+              />
+              <div className="text-left ml-3">
+                <p className="text-xs text-gray-200">Download on</p>
+                <p className="text-sm md:text-base">Apple Store</p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="flex flex-wrap items-center lg:justify-end text-sm text-gray-500 my-5 pr-5 gap-6 max-lg:gap-2 font-medium"> 
-            <a href="https://x.com" className="flex underline gap-2">
-                <FaXTwitter className="text-xl"/>
-                {"Follow us on X | Twitter"}
-            </a>
-            <a href="mailto:hello@bemaxo.com" className="flex underline gap-2"> 
-                <IoMailUnreadOutline className="text-xl" />
-                hello@bemaxo.com
-            </a>
-            
+        <div className="mt-28 flex flex-col md:flex-row md:justify-between items-center text-sm text-gray-400">
+          <p className="order-2 md:order-1 mt-8 md:mt-0">
+            &copy; Bemaxo, {new Date().getFullYear()}.
+          </p>
+          <div className="max-md:flex flex-wrap items-center justify-center text-center  max-md:mx-10 order-1 md:order-2">
+            <Link href={"/legal/terms-condition"}><span className="px-2">Terms and Condition</span></Link>
+            <Link href={"/legal/privacy-policies"}><span className="px-2 border-l">Privacy Policies</span></Link>
+            <Link href={"/legal/report-bugs"}><span className="px-2 border-l">Report Bugs</span></Link>
+            <Link href={"/legal/marketing"}><span className="px-2 border-l">Marketing</span></Link>
+            <Link href={"/legal/copyright-issue"}><span className="px-2 border-l">Copyright Issues</span></Link>
+            <Link href={"/legal/help-center"}><span className="px-2 border-l">Help Center</span></Link>
+
+          </div>
         </div>
-
-        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-
-        <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
-          © {new Date().getFullYear()} Bemaxo. All Rights Reserved.
-        </span>
       </div>
-    </footer>
+    </div>
   );
 };
 
