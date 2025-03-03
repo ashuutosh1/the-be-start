@@ -5,7 +5,7 @@ import React from 'react';
 import Logo from "../../../../public/Landing-assets/term-logo-light.png";
 import { IoIosArrowBack } from "react-icons/io";
 import Link from 'next/link';
-import { FaShieldAlt, FaUserSecret, FaDatabase, FaShareAlt, FaLock, FaUserCheck, FaCookieBite, FaSyncAlt } from "react-icons/fa";
+import { FaShieldAlt, FaUserSecret, FaShareAlt, FaLock, FaUserCheck, FaCookieBite, FaSyncAlt } from "react-icons/fa";
 
 function PrivacyPolicy() {
   return (

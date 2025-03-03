@@ -5,7 +5,7 @@ import React from 'react';
 import Logo from "../../../../public/Landing-assets/term-logo-light.png";
 import { IoIosArrowBack } from "react-icons/io";
 import Link from 'next/link';
-import { FaShieldAlt, FaLock, FaUserShield, FaDatabase, FaBug, FaUserSecret } from "react-icons/fa";
+import {FaLock, FaUserShield, FaDatabase, FaBug, FaUserSecret } from "react-icons/fa";
 import { MdOutlineSecurity } from "react-icons/md";
 
 function SafetySecurity() {
