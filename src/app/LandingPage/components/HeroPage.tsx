@@ -18,7 +18,7 @@ function HeroPage() {
           {/* ----- Login Form Section ----- */}
         <div className="flex-1">
           <div className="flex items-center justify-center">
-            <div className="rounded-lg border-2 border-gray-400 shadow-md  flex flex-col items-center justify-center ">
+            <div className="rounded-lg border-2  shadow-md  flex flex-col items-center justify-center ">
               <SignInForm/>
             </div>
           </div>

@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --default-background: black;
-  --default-text: white;
+  --default-background: #F3F4F6;
+  --default-text: black;
 }
 
 body {

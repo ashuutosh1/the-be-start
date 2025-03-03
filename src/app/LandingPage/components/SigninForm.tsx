@@ -13,13 +13,13 @@ export default function SignInForm() {
       <div className="px-2 py-2.5 sm:px-4">
         {/* Login Form */}
         <form id="main-login" className="flex flex-col gap-3 pb-4">
-          <h1 className="mb-4 text-2xl font-bold dark:text-white">Login</h1>
+          <h1 className="mb-4 text-2xl font-bold ">Login</h1>
 
           {usePhone ? (
             // Phone Number Input
             <div>
               <div className="mb-2">
-                <label className="text-sm font-bold text-gray-900 dark:text-gray-300" htmlFor="phone">
+                <label className="text-sm font-bold text-gray-500" htmlFor="phone">
                   Enter Phone Number:
                 </label>
               </div>
@@ -50,7 +50,7 @@ export default function SignInForm() {
             <>
               <div>
                 <div className="mb-2">
-                  <label className="text-sm font-bold text-gray-900 dark:text-gray-300" htmlFor="email">
+                  <label className="text-sm font-bold text-gray-500" htmlFor="email">
                     Enter Email or Username:
                   </label>
                 </div>
@@ -70,7 +70,7 @@ export default function SignInForm() {
 
               <div>
                 <div className="mb-2">
-                  <label className="text-sm font-bold text-gray-900 dark:text-gray-300" htmlFor="password">
+                  <label className="text-sm font-bold text-gray-500 " htmlFor="password">
                     Password
                   </label>
                 </div>
@@ -105,9 +105,9 @@ export default function SignInForm() {
 
           {/* Divider */}
           <div className="flex items-center my-4">
-            <hr className="flex-grow h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
-            <span className="px-4 text-gray-500 dark:text-white">OR</span>
-            <hr className="flex-grow h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
+            <hr className="flex-grow h-0.5 border-t-0 bg-black/10" />
+            <span className="px-4 text-gray-500 ">OR</span>
+            <hr className="flex-grow h-0.5 border-t-0 bg-black/10" />
           </div>
 
           {/* Toggle between Email and Phone Login */}
@@ -115,7 +115,7 @@ export default function SignInForm() {
             <button
               type="button"
               onClick={() => setUsePhone(!usePhone)}
-              className="transition-colors focus:ring-2 p-0.5 bg-white hover:bg-gray-100 text-gray-900 border border-gray-200 rounded-lg"
+              className="transition-colors  hover:bg-gray-200 text-gray-900 border border-gray-300 rounded-lg"
             >
               <span className="flex items-center justify-center gap-2 font-medium py-1 px-2.5 text-base">
                 
@@ -128,7 +128,7 @@ export default function SignInForm() {
 
         {/* New User Signup */}
         <div className="min-w-[270px]">
-          <div className="mt-4 text-center dark:text-gray-200">
+          <div className="mt-4 text-center text-gray-500">
             New user?{" "}
             <Link className="text-purple-500 underline hover:text-purple-700" href="/signup">
               Create account here
