@@ -14,8 +14,8 @@ function TermsPage() {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      <div className="max-w-4xl mx-auto px-4 py-16">
-        <div className="bg-white rounded-2xl shadow-xl p-8">
+      <div className="max-w-4xl mx-auto px-4 max-lg:px-0 py-16">
+        <div className="bg-white rounded-2xl shadow-xl p-8 max-lg:p-4">
           <div className='flex items-center justify-between'>
             <Image src={Logo} alt='bemaxo-logo' className='max-w-40 h-auto my-4' />
             <Link href={"/"}><span className='text-black font-bold underline flex items-center gap-2'><IoIosArrowBack />Home</span></Link>
@@ -24,7 +24,7 @@ function TermsPage() {
 
 
           <h1 className="text-3xl font-bold text-gray-900 mb-8">Terms of Service</h1>
-          
+
 
           <section className="mb-8">
             <h2 className="text-xl font-semibold text-gray-800 mb-4">1. Acceptance of Terms</h2>
@@ -99,8 +99,8 @@ function TermsPage() {
               </a>
             </div>
             <Link href={"/"}><div className='text-white font-bold underline flex items-center gap-2 mt-4 justify-center border-2 border-purple-600 p-2 rounded-full bg-purple-400'>
-            <IoIosArrowBack />Home</div></Link>
-            
+              <IoIosArrowBack />Home</div></Link>
+
 
           </section>
 

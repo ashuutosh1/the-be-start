@@ -25,8 +25,8 @@ function HelpPage() {
 
   return (
     <div className="bg-gray-50 min-h-screen flex items-center justify-center">
-      <div className="max-w-4xl w-full px-4 py-16">
-        <div className="bg-white rounded-2xl shadow-xl p-8">
+      <div className="max-w-4xl w-full px-4 max-lg:px-0 py-16">
+        <div className="bg-white rounded-2xl shadow-xl p-8 max-lg:p-4">
           {/* Header */}
           <div className="flex items-center justify-between">
             <Image src={Logo} alt="bemaxo-logo" className="max-w-40 h-auto my-4" />

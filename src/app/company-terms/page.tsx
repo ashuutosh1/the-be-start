@@ -39,7 +39,7 @@ function CompanyTerms() {
 
   return (
     <div className="bg-gray-50 text-black">
-      <div className="flex max-lg:flex-col max-w-6xl mx-auto px-4">
+      <div className="flex max-lg:flex-col max-w-6xl mx-auto px-4 max-lg:px-2">
 
         {/* Dropdown for small screens */}
         <div className="lg:hidden flex relative mt-10">
@@ -104,7 +104,7 @@ function CompanyTerms() {
         </div>
 
         {/* Main Content Section */}
-        <div className="flex-1 px-6">{renderContent()}</div>
+        <div className="flex-1 px-6 max-lg:p-0">{renderContent()}</div>
       </div>
     </div>
   );

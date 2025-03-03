@@ -10,8 +10,8 @@ import { FaCopyright } from "react-icons/fa";
 function CopyrightIssues() {
   return (
     <div className="bg-gray-50 min-h-screen">
-      <div className="max-w-4xl mx-auto px-4 py-16">
-        <div className="bg-white rounded-2xl shadow-xl p-8">
+      <div className="max-w-4xl mx-auto px-4 max-lg:px-0 py py-16 ">
+        <div className="bg-white rounded-2xl shadow-xl p-8 max-lg:p-4">
           <div className='flex items-center justify-between'>
             <Image src={Logo} alt='bemaxo-logo' className='max-w-40 h-auto my-4' />
             <Link href={'/'}>
