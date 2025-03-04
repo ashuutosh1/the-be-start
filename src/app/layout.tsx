@@ -47,10 +47,10 @@ export default function RootLayout({
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
 
+
         {/* Structured Data (JSON-LD for SEO) */}
         <script type="application/ld+json">
           {JSON.stringify({
-            "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Bemaxo",
             "url": "https://bemaxo.com",

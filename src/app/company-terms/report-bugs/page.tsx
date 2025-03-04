@@ -47,7 +47,7 @@ function ReportBug() {
               ></textarea>
               <button
                 type="submit"
-                className="bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-blue-500"
+                className="bg-red-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-purple-500"
               >
                 <FaPaperPlane /> Submit
               </button>
