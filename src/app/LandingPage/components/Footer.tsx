@@ -38,25 +38,25 @@ const Footer = () => {
           </p>
 
           <div className="max-md:flex flex-wrap items-center justify-center text-center max-md:mx-10 order-1 md:order-2">
-            <Link href="/company-terms?section=terms">
+            <Link href="/company-terms">
               <span className="px-2 hover:text-gray-900">Terms of Services</span>
             </Link>
-            <Link href="/company-terms?section=privacy">
+            <Link href="/company-terms">
               <span className="px-2 border-l hover:text-gray-900">Privacy Policies</span>
             </Link>
-            <Link href="/company-terms?section=bugs">
+            <Link href="/company-terms">
               <span className="px-2 border-l hover:text-gray-900">Report Bugs</span>
             </Link>
-            <Link href="/company-terms?section=marketing">
+            <Link href="/company-terms">
               <span className="px-2 border-l hover:text-gray-900">Marketing</span>
             </Link>
-            <Link href="/company-terms?section=copyright">
+            <Link href="/company-terms">
               <span className="px-2 border-l hover:text-gray-900">Copyright Issues</span>
             </Link>
-            <Link href="/company-terms?section=help">
+            <Link href="/company-terms">
               <span className="px-2 border-l hover:text-gray-900">Help Center</span>
             </Link>
-            <Link href="/company-terms?section=about">
+            <Link href="/company-terms">
               <span className="px-2 border-l hover:text-gray-900">About Us</span>
             </Link>
           </div>

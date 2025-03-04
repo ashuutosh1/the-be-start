@@ -130,7 +130,7 @@ export default function SignInForm() {
         <div className="min-w-[270px]">
           <div className="mt-4 text-center text-gray-500">
             New user?{" "}
-            <Link className="text-purple-500 underline hover:text-purple-700" href="/signup">
+            <Link className="text-purple-500 underline hover:text-purple-700" href="/SignUp">
               Create account here
             </Link>
           </div>
