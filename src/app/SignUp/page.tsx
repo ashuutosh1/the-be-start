@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import BemaxoLogo from "../../../public/Landing-assets/term-logo-light.png";
-import { FaRegFaceSmileBeam } from "react-icons/fa6";
 import Link from 'next/link';
 
 function SignPage() {
@@ -18,7 +17,7 @@ function SignPage() {
     termsAccepted: true,
   });
 
-  const [error, setError] = useState(""); 
+  const [error, setError] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
@@ -51,8 +50,8 @@ function SignPage() {
   };
 
   return (
-    <div className='w-full h-full bg-gray-200 flex items-center justify-center py-4'>
-      <div className='p-10 sm:bg-gray-50 sm:shadow-lg rounded-2xl w-full max-w-xl'>
+    <div className='w-full h-full max-2xl:h-screen bg-gray-200 flex items-center justify-center py-4'>
+      <div className='p-10 bg-gray-50 shadow-md rounded-2xl  max-w-xl'>
         <div className='flex items-center justify-center'>
           <Image src={BemaxoLogo} alt='the image' className='max-w-40 h-auto' />
         </div>
@@ -114,7 +113,7 @@ function SignPage() {
               />
             </div>
             <div className='flex-1 flex items-center'>
-              <span className='flex items-center font-medium text-green-400 sm:mt-4 gap-2'><FaRegFaceSmileBeam />{" Username is available"}</span>
+              {/* <span className='flex items-center font-medium text-green-400 sm:mt-4 gap-2'><FaRegFaceSmileBeam />{" Username is available"}</span> */}
             </div>
 
           </div>

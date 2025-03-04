@@ -19,14 +19,14 @@ function HeroLogo() {
             {"Bemaxo.com - Bringing People and Worlds Together."}
           </div>
           <div className="flex  text-center font-semibold text-gray-400 text-lg pb-6 max-lg:hidden  ">
-            {"Be Maximum Original"}
+            {"Be Minimal - Be Original"}
           </div>
         </div>
 
         <div className="flex items-center justify-center">
-          <button className="flex lg:px-6 max-lg:px-6 max-sm:px-4 py-4 max-lg:py-2 text-white bg-purple-500 hover:bg-purple-700 rounded-full font-bold gap-2 ">
+          <button className="flex lg:px-6 max-lg:px-4 max-sm:px-4 py-4 max-lg:py-2 text-white bg-purple-500 hover:bg-purple-700 rounded-full font-bold gap-2 ">
             <MdOutlineExplore className="text-2xl" />
-            <span>Explore</span>
+            <span>{"Explore "}<span className="max-md:hidden">Bemaxo</span></span>
           </button>
         </div>
       </div>

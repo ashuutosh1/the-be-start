@@ -9,10 +9,10 @@ export default function SignInForm() {
   const [usePhone, setUsePhone] = useState(false);
 
   return (
-    <div className="flex flex-col justify-center p-6">
+    <div className="flex flex-col justify-center p-6 max-sm:p-4">
       <div className="px-2 py-2.5 sm:px-4">
         {/* Login Form */}
-        <form id="main-login" className="flex flex-col gap-3 pb-4">
+        <form id="main-login" className="flex flex-col gap-3 pb-4 md:min-w-80 max-md:min-w-72">
           <h1 className="mb-4 text-2xl font-bold ">Login</h1>
 
           {usePhone ? (
@@ -58,8 +58,8 @@ export default function SignInForm() {
                   <div className="relative w-full">
                     <input
                       className="block w-full border bg-gray-50 border-gray-300 text-black focus:border-purple-500 focus:ring-purple-500 p-2.5 text-sm rounded-lg"
-                      id="email"
-                      type="email"
+                      id="text"
+                      type="text"
                       name="email"
                       placeholder="email address or username"
                       required
@@ -101,13 +101,28 @@ export default function SignInForm() {
             </>
           )}
 
-
-
           {/* Divider */}
           <div className="flex items-center my-4">
             <hr className="flex-grow h-0.5 border-t-0 bg-black/10" />
             <span className="px-4 text-gray-500 ">OR</span>
             <hr className="flex-grow h-0.5 border-t-0 bg-black/10" />
+          </div>
+
+
+
+          {/* Create new account*/}
+          <div className="flex flex-col gap-2">
+            <button
+              type="button"
+              className="transition-colors bg-green-500 hover:bg-green-700 text-white border border-green-300 rounded-lg"
+            >
+              <Link className="" href="/SignUp">
+                <span className="flex items-center justify-center gap-2 font-medium py-1 px-2.5 text-base">
+                  Create new account
+                </span>
+              </Link>
+            </button>
+
           </div>
 
           {/* Toggle between Email and Phone Login */}
@@ -118,24 +133,14 @@ export default function SignInForm() {
               className="transition-colors  hover:bg-gray-200 text-gray-900 border border-gray-300 rounded-lg"
             >
               <span className="flex items-center justify-center gap-2 font-medium py-1 px-2.5 text-base">
-                
-                {usePhone ? <FaRegCircleUser/> : <FaPhoneAlt /> }
-                {usePhone ? "Log in with Email or username" : "Log in with Phone Number"}
+
+                {usePhone ? <FaRegCircleUser /> : <FaPhoneAlt />}
+                {usePhone ? "Log in via email or username" : "Log in via Phone"}
               </span>
             </button>
           </div>
         </form>
-
-        {/* New User Signup */}
-        <div className="min-w-[270px]">
-          <div className="mt-4 text-center text-gray-500">
-            New user?{" "}
-            <Link className="text-purple-500 underline hover:text-purple-700" href="/SignUp">
-              Create account here
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
+      </div >
+    </div >
   );
 }
