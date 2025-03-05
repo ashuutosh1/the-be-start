@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,19 +12,37 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Metadata for SEO & Social Sharing
 export const metadata: Metadata = {
   title: "Bemaxo",
-  description: "Bemaxo - The Future of Social Networking. Connect, share, and explore. Join now for a seamless experience!",
+  description:
+    "Bemaxo - The Future of Social Networking. Connect, share, and explore. Join now for a seamless experience!",
   keywords: [
-    "Bemaxo", "Bemaxo.com", "Bemaxo website", "Bemaxo app", "Bemaxo safe",
-    "Bemaxo login", "Bemaxo social media", "Bemaxo register", "Bemaxo account",
-    "Bemaxo sign up", "Bemaxo official site", "Bemaxo secure", "Bemaxo connect",
-    "Bemaxo download", "Bemaxo online", "Bemaxo free", "Bemaxo profile", "Bemaxo network"
+    "Bemaxo social networking",
+    "next-gen social media",
+    "Bemaxo community",
+    "social media innovation",
+    "Bemaxo user engagement",
+    "future of social networking",
+    "secure social connections",
+    "AI-powered social platform",
+    "Bemaxo privacy-focused",
+    "next-gen content sharing",
+    "social discovery network",
+    "Bemaxo digital identity",
+    "seamless social experience",
+    "Bemaxo interactive features",
+    "social media for creators",
+    "engagement-driven platform",
+    "Bemaxo smart algorithms",
+    "modern social ecosystem",
   ],
+
   authors: [{ name: "Bemaxo" }],
   openGraph: {
     title: "Bemaxo - Social Media Platform",
-    description: "Create an account or log into Bemaxo. Connect with people, share updates, and engage.",
+    description:
+      "Create an account or log into Bemaxo. Connect with people, share updates, and engage.",
     url: "https://bemaxo.com",
     siteName: "Bemaxo",
     locale: "en_US",
@@ -43,24 +60,25 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <Head>
+      <head>
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
 
-
         {/* Structured Data (JSON-LD for SEO) */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@type": "Organization",
-            "name": "Bemaxo",
-            "url": "https://bemaxo.com",
-            "description": "Join Bemaxo to connect, share and explore the online world.",
-            "sameAs": [
-              "https://x.com/bemaxo_",
-            ]
-          })}
-        </script>
-      </Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Bemaxo",
+              url: "https://bemaxo.com",
+              description: "Join Bemaxo to connect, share and explore the online world.",
+              sameAs: ["https://x.com/bemaxo_"],
+            }),
+          }}
+        />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>

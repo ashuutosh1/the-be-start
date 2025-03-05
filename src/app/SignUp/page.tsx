@@ -4,6 +4,8 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import BemaxoLogo from "../../../public/Landing-assets/term-logo-light.png";
 import Link from 'next/link';
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+
 
 function SignPage() {
   const [formData, setFormData] = useState({
@@ -18,6 +20,7 @@ function SignPage() {
   });
 
   const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
@@ -50,7 +53,7 @@ function SignPage() {
   };
 
   return (
-    <div className='w-full h-full max-2xl:h-screen bg-gray-200 flex items-center justify-center py-4'>
+    <div className='w-full h-full  bg-gray-200 flex items-center justify-center py-4'>
       <div className='p-10 bg-gray-50 shadow-md rounded-2xl  max-w-xl'>
         <div className='flex items-center justify-center'>
           <Image src={BemaxoLogo} alt='the image' className='max-w-40 h-auto' />
@@ -75,7 +78,7 @@ function SignPage() {
                 value={formData.firstName}
                 onChange={handleChange}
                 required
-                className='font-medium mt-1 block w-full px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500'
+                className='block w-full border bg-gray-50 border-gray-300 text-black focus:border-purple-500 focus:ring-purple-500 p-2.5 text-sm rounded-lg'
               />
             </div>
             <div className='flex-1'>
@@ -90,13 +93,13 @@ function SignPage() {
                 value={formData.lastName}
                 onChange={handleChange}
                 required
-                className='font-medium mt-1 block w-full px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500'
+                className='block w-full border bg-gray-50 border-gray-300 text-black focus:border-purple-500 focus:ring-purple-500 p-2.5 text-sm rounded-lg'
               />
             </div>
           </div>
 
           {/* Username Field */}
-          <div className='mb-2 flex gap-4 max-sm:flex-col'>
+          <div className='mb-2 flex gap-2 flex-col'>
             <div className='flex-1'>
               <label htmlFor='username' className='block text-sm font-semibold text-gray-700'>
                 Username
@@ -109,15 +112,13 @@ function SignPage() {
                 onChange={handleChange}
                 placeholder='@ username'
                 required
-                className='font-medium mt-1 block w-full px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500'
+                className='block w-full border bg-gray-50 border-gray-300 text-black focus:border-purple-500 focus:ring-purple-500 p-2.5 text-sm rounded-lg'
               />
             </div>
-            <div className='flex-1 flex items-center'>
-              {/* <span className='flex items-center font-medium text-green-400 sm:mt-4 gap-2'><FaRegFaceSmileBeam />{" Username is available"}</span> */}
-            </div>
+            {error && <p className="text-red-500 text-sm ">{error}</p>}
 
           </div>
-          {error && <p className="text-red-500 text-sm my-4">{error}</p>}
+
 
 
           {/* Email and Phone Number Fields */}
@@ -134,7 +135,7 @@ function SignPage() {
                 onChange={handleChange}
                 placeholder='Enter your email'
                 required
-                className='font-medium mt-1 block w-full px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500'
+                className='block w-full border bg-gray-50 border-gray-300 text-black focus:border-purple-500 focus:ring-purple-500 p-2.5 text-sm rounded-lg'
               />
             </div>
             <div className='hidden'>
@@ -149,26 +150,33 @@ function SignPage() {
                 onChange={handleChange}
                 placeholder='Enter phone number'
                 required
-                className='font-medium mt-1 block w-full px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500'
+                className='block w-full border bg-gray-50 border-gray-300 text-black focus:border-purple-500 focus:ring-purple-500 p-2.5 text-sm rounded-lg'
               />
             </div>
           </div>
 
           {/* Password Field */}
-          <div className='mb-2'>
-            <label htmlFor='password' className='block text-sm font-semibold text-gray-700'>
+          <div className="mb-2 relative">
+            <label htmlFor="password" className="block text-sm font-semibold text-gray-700">
               Password
             </label>
             <input
-              type='password'
-              id='password'
-              name='password'
+              type={showPassword ? "text" : "password"}
+              id="password"
+              name="password"
               value={formData.password}
               onChange={handleChange}
-              placeholder='............'
+              placeholder="............"
               required
-              className='font-medium mt-1 block w-full px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500'
+              className="block w-full border bg-gray-50 border-gray-300 text-black focus:border-purple-500 focus:ring-purple-500 p-2.5 text-sm rounded-lg"
             />
+            <button
+              type="button"
+              className="absolute inset-y-10 right-3 flex items-center font-bold"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ? <AiFillEye className="text-xl text-gray-500" /> : <AiFillEyeInvisible className=" text-gray-500 text-xl" />}
+            </button>
           </div>
 
           {/* Re-enter Password Field */}
@@ -183,7 +191,7 @@ function SignPage() {
               value={formData.reenterPassword}
               onChange={handleChange}
               required
-              className='font-medium mt-1 block w-full px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500'
+              className='block w-full border bg-gray-50 border-gray-300 text-black focus:border-purple-500 focus:ring-purple-500 p-2.5 text-sm rounded-lg'
             />
           </div>
 

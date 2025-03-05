@@ -7,9 +7,9 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://www.bemaxo.com/company-terms?section=terms</loc>
+        <loc>https://www.bemaxo.com/company-terms</loc>
         <lastmod>2025-03-01</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>1.0</priority>
     </url>
 </urlset>
