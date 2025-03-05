@@ -5,8 +5,8 @@ import React from "react";
 
 function HeroLogo() {
   return (
-    <div className="md:flex-1 p-10">
-      <div className="flex sm:gap-6 max-lg:gap-4 lg:gap-0  md: flex-col">
+    <div className="md:flex-1 p-10 max-sm:pt-6">
+      <div className="flex max-sm:gap-0 max-lg:gap-4 lg:gap-0  md: flex-col">
         <div className="flex items-center justify-center max-lg:hidden">
           <Image
             src={HeroImage}
@@ -19,7 +19,7 @@ function HeroLogo() {
             {"Bemaxo.com - Bringing People and Worlds Together."}
           </div>
           <div className="flex  text-center font-semibold text-gray-400 text-lg pb-6 max-lg:hidden  ">
-            {"Be Minimal - Be Original"}
+            {"Bemaxo: Where Trends Come Alive!"}
           </div>
         </div>
 

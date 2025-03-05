@@ -7,10 +7,12 @@ const Footer = () => {
   return (
     <div className="mt-10">
       <div className="max-w-4xl mx-auto text-white py-10">
+
+        {/* App Links for Play store and App store */}
         <div className="text-center">
           <div className="flex max-sm:flex-col max-sm:gap-10 items-center justify-center my-10">
             <Link href="https://play.google.com/store" target="_blank">
-              <div className="flex items-center border border-black rounded-lg px-4 py-2 min-w-52 mx-2 cursor-pointer hover:bg-gray-400">
+              <div className="flex items-center border border-black rounded-lg px-4 py-2 min-w-52 mx-2 cursor-pointer hover:bg-gray-50">
                 <Image src={PlayStore} className="w-7 md:w-8" alt="Google Play" />
                 <div className="text-left ml-3">
                   <p className="text-xs text-gray-700">Download on</p>
@@ -20,7 +22,7 @@ const Footer = () => {
             </Link>
 
             <Link href="https://www.apple.com/app-store/" target="_blank">
-              <div className="flex items-center border border-black rounded-lg px-4 py-2 min-w-52 mx-2 cursor-pointer hover:bg-gray-400">
+              <div className="flex items-center border border-black rounded-lg px-4 py-2 min-w-52 mx-2 cursor-pointer hover:bg-gray-50">
                 <Image src={AppleStore} className="w-7 md:w-8" alt="Apple Store" />
                 <div className="text-left ml-3">
                   <p className="text-xs text-gray-700">Download on</p>
@@ -29,6 +31,12 @@ const Footer = () => {
               </div>
             </Link>
           </div>
+        </div>
+
+        <div className="flex flex-col items-center justify-center mx-10 mt-20 text-center text-wrap gap-2">
+          <span className="text-gray-500 font-semibold">Bemaxo – All About Trends </span>
+          <span className="text-gray-400 hover:text-gray-600">{"At Bemaxo, we bring you the latest and most exciting trends from around the world. Whether it’s fashion, technology, entertainment, or lifestyle, we create a dynamic space where users can explore, share, and engage with the hottest topics. Our platform is designed to keep you ahead of the curve by curating viral content, fostering discussions, and connecting like-minded individuals. More than just a social media platform, Bemaxo is a community-driven hub where trends are born and evolve. We empower users to express their creativity, stay informed, and be part of the next big thing. If it's trending, it's on Bemaxo!"} </span>
+          <span className="text-gray-400 font-bold hover:text-gray-600 hover:text-xl">Join us and be part of the trend revolution! 🚀</span>
         </div>
 
         {/* Footer Navigation */}

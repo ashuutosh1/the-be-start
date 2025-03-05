@@ -3,7 +3,7 @@
 # Our goal is to provide a seamless user experience while ensuring the responsible use of public content.
 
 # For our company terms and policies, visit: https://www.bemaxo.com/company-terms
-# To create a bemaxo account, visit: https://www.bemaxo.com/signup
+# To create a bemaxo account, visit: https://www.bemaxo.com/SignUp
 
 User-agent: *
 Disallow: /

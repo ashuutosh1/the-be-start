@@ -11,7 +11,7 @@ function NavBar() {
   return (
     <>
       <section className='py-4 px-8 lg:px-40 max-lg:px-20 z-40 fixed w-full  '>
-        <div className='container rounded-full backdrop-filter backdrop-blur-lg bg-white bg-opacity-50'>
+        <div className='container rounded-full backdrop-filter backdrop-blur-lg bg-gray-50 bg-opacity-50'>
           <div className='flex justify-between max-lg:items-center max-lg:justify-center w-full border border-black/10 rounded-full p-2 px-4 items-center'>
 
             {/*----- NavBar Logo in left corner ----- */}
