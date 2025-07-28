@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://bemaxo.com/</loc>
-        <lastmod>2025-03-01</lastmod>
+        <loc>https://www.bemaxo.com/</loc>
+        <lastmod>2025-07-28</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://www.bemaxo.com/company-terms</loc>
+        <loc>https://www.bemaxo.com/info/terms</loc>
         <lastmod>2025-03-01</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://www.bemaxo.com/info/privacy</loc>
+        <lastmod>2025-03-01</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://www.bemaxo.com/info/about</loc>
+        <lastmod>2025-02-15</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
+        <priority>0.5</priority>
     </url>
 </urlset>

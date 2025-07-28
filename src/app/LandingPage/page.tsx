@@ -61,7 +61,7 @@ function LandingPage() {
             </div>
 
             {/* Right side - Sign In Options */}
-            <div className="w-full md:w-1/2 p-12 bg-gradient-to-t from-white/10 to-transparent border-orange-400 border-2 rounded-lg">
+            <div className="w-full md:w-1/2 p-12 max-md:p-6 bg-gradient-to-t from-white/10 to-transparent border-orange-400 border-2 rounded-lg">
               <div className="max-w-md mx-auto">
                 <h2 className="text-4xl font-bold bg-gradient-to-r from-orange-600 to-orange-800 bg-clip-text text-transparent mb-3 text-center tracking-tight">
                   Welcome, Bemaxo!
@@ -110,7 +110,6 @@ function LandingPage() {
                     </div>
                   </div>
 
-                  {/* Email Sign In Button */}
 
                   {/* Apple Sign In Button */}
                   <button

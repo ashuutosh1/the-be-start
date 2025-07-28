@@ -1,12 +1,11 @@
 # Welcome to Bemaxo's robots.txt
-# Bemaxo is a social media platform designed to connect people, foster discussions, and create engaging communities. 
+# Bemaxo is a social media platform designed to connect people, foster discussions, and create engaging communities. 
 # Our goal is to provide a seamless user experience while ensuring the responsible use of public content.
 
-# For our company terms and policies, visit: https://www.bemaxo.com/company-terms
-# To create a bemaxo account, visit: https://www.bemaxo.com/SignUp
+# For our company terms and policies, visit: https://www.bemaxo.com/info/terms
+# To create a bemaxo account, visit: https://www.bemaxo.com/info/privacy
 
 User-agent: *
-Disallow: /
-
+Disallow: 
 
 Sitemap: https://bemaxo.com/sitemap.xml
