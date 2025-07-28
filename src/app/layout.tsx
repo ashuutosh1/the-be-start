@@ -74,7 +74,7 @@ export default function RootLayout({
               name: "Bemaxo",
               url: "https://bemaxo.com",
               description: "Join Bemaxo to connect, share and explore the online world.",
-              sameAs: ["https://x.com/bemaxo_"],
+              sameAs: ["https://x.com/bemaxoapp"],
             }),
           }}
         />
