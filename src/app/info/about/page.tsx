@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image'
 import { useRouter } from 'next/navigation';
 
 const AboutUs: React.FC = () => {
@@ -22,12 +23,12 @@ const AboutUs: React.FC = () => {
             {/* Floating Back Button */}
             <button
                 onClick={() => router.back()}
-                className="fixed top-4 left-4 z-50 px-4 py-2 bg-white text-black hover:bg-black hover:text-white rounded-lg transition-colors flex items-center shadow-lg"
+                className="fixed top-4 left-4 z-50 px-2 py-2 bg-white text-black hover:bg-black hover:text-white rounded-lg transition-colors flex items-center shadow-lg"
             >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
                 </svg>
-                Back
+              
             </button>
 
             <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
@@ -40,7 +41,7 @@ const AboutUs: React.FC = () => {
                                 About Bemaxo
                             </h1>
                             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-                                Empowering connections and transforming experiences through innovative technology
+                                Empowering connections and transforming experiences through innovative technology and minimalistic UI
                             </p>
                         </div>
                     </div>
@@ -66,9 +67,14 @@ const AboutUs: React.FC = () => {
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <div className="text-center text-white">
                                     <div className="w-24 h-24 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center">
-                                        <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 9.74s9-4.19 9-9.74V7l-10-5z" />
-                                        </svg>
+                                         <Image
+                                                          src="/Landing-assets/about-img.png"
+                                                          alt="Company Logo"
+                                                          fill
+                                                          style={{ objectFit: 'contain' }}
+                                                          priority
+                                                          className="animate-float"
+                                                        />
                                     </div>
                                     <h3 className="text-2xl font-bold">Innovation</h3>
                                 </div>
@@ -88,7 +94,7 @@ const AboutUs: React.FC = () => {
                         </div>
                         <div className="grid md:grid-cols-3 gap-8">
                             {/* Value Card: Authenticity */}
-                            <div className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                            <div className="text-center p-8 bg-white rounded-2xl ">
                                 <div className="w-16 h-16 mx-auto mb-6 bg-gray-100 rounded-full flex items-center justify-center">
                                     <svg className="w-8 h-8 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
@@ -100,7 +106,7 @@ const AboutUs: React.FC = () => {
                                 </p>
                             </div>
                             {/* Value Card: Trust & Safety */}
-                            <div className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                            <div className="text-center p-8 bg-white rounded-2xl ">
                                 <div className="w-16 h-16 mx-auto mb-6 bg-gray-100 rounded-full flex items-center justify-center">
                                     <svg className="w-8 h-8 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -112,7 +118,7 @@ const AboutUs: React.FC = () => {
                                 </p>
                             </div>
                             {/* Value Card: Innovation */}
-                            <div className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                            <div className="text-center p-8 bg-white rounded-2xl ">
                                 <div className="w-16 h-16 mx-auto mb-6 bg-gray-100 rounded-full flex items-center justify-center">
                                     <svg className="w-8 h-8 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M13 10V3L4 14h7v7l9-11h-7z" />

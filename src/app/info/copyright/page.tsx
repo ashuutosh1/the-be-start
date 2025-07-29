@@ -111,21 +111,21 @@ const CopyrightDocument: React.FC = () => {
                 <meta name="description" content="Understand our copyright policy and how to report infringement on Bemaxo." />
             </Head>
 
-            <button
+              <button
                 onClick={() => router.back()}
-                className="fixed top-4 left-4 z-50 px-4 py-2 bg-white text-black hover:bg-black hover:text-white rounded-lg transition-colors flex items-center shadow-lg"
+                className="fixed top-4 left-4 z-50 px-2 py-2 bg-white text-black hover:bg-black hover:text-white rounded-lg transition-colors flex items-center shadow-lg"
             >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
                 </svg>
-                Back
+              
             </button>
 
             <div className="min-h-screen bg-white">
                 <div className="relative bg-gray-900">
-                    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+                    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
                         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Copyright Policy</h1>
-                        <p className="text-lg text-gray-300">Effective Date: 28 July 2025</p>
+
                     </div>
                 </div>
 
@@ -141,8 +141,8 @@ const CopyrightDocument: React.FC = () => {
                                             key={policy.id}
                                             onClick={() => scrollToSection(policy.id)}
                                             className={`w-full px-3 py-2 text-left rounded-md text-sm font-medium transition-colors ${activeSection === policy.id
-                                                    ? 'bg-gray-100 text-black'
-                                                    : 'text-gray-600 hover:bg-gray-50 hover:text-black'
+                                                ? 'bg-gray-100 text-black'
+                                                : 'text-gray-600 hover:bg-gray-50 hover:text-black'
                                                 }`}
                                         >
                                             {policy.title}
@@ -159,8 +159,8 @@ const CopyrightDocument: React.FC = () => {
                                     key={policy.id}
                                     id={policy.id}
                                     className={`scroll-mt-20 mb-16 ${policy.id === 'platform-notice'
-                                            ? 'bg-amber-50 border border-amber-200 rounded-xl p-8'
-                                            : ''
+                                        ? 'bg-amber-50 border border-amber-200 rounded-xl p-8'
+                                        : ''
                                         }`}
                                 >
                                     {/* --- Stylized Heading --- */}
