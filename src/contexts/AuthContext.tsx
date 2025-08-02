@@ -19,12 +19,18 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (user) => {
-            setUser(user);
-            setLoading(false);
-        });
+        // Only set up auth listener if we're on client side and auth is available
+        if (typeof window !== 'undefined' && auth && onAuthStateChanged) {
+            const unsubscribe = onAuthStateChanged(auth, (user) => {
+                setUser(user);
+                setLoading(false);
+            });
 
-        return () => unsubscribe();
+            return () => unsubscribe();
+        } else {
+            // If auth is not available, just set loading to false
+            setLoading(false);
+        }
     }, []);
 
     return (

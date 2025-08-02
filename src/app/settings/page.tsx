@@ -21,6 +21,12 @@ export default function SettingPage() {
     const [isLoggingOut, setIsLoggingOut] = useState(false);
 
     const handleLogout = async () => {
+        // Check if auth is available before proceeding
+        if (!auth) {
+            console.error('Firebase auth not initialized');
+            return;
+        }
+
         setIsLoggingOut(true);
         try {
             await signOut(auth);

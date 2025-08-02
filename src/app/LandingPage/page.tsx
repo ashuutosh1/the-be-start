@@ -19,6 +19,12 @@ function LandingPage() {
   }, [user, loading, router]);
 
   const handleGoogleSignIn = async () => {
+    // Check if auth is available before proceeding
+    if (!auth || !googleProvider) {
+      console.error('Firebase auth not initialized');
+      return;
+    }
+
     setIsLoading("google");
     try {
       const result = await signInWithPopup(auth, googleProvider);
