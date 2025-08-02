@@ -19,17 +19,10 @@ function LandingPage() {
   }, [user, loading, router]);
 
   const handleGoogleSignIn = async () => {
-    // Check if auth is available before proceeding
-    if (!auth || !googleProvider) {
-      console.error('Firebase auth not initialized');
-      return;
-    }
-
     setIsLoading("google");
     try {
       const result = await signInWithPopup(auth, googleProvider);
       console.log("Google sign-in successful:", result.user);
-      // Navigation will be handled by useEffect when user state changes
     } catch (error) {
       console.error("Google sign-in error:", error);
       setIsLoading(null);
@@ -39,8 +32,6 @@ function LandingPage() {
   const handleAppleSignIn = async () => {
     setIsLoading("apple");
     try {
-      // Apple Sign-In would require additional setup
-      // For now, showing placeholder
       console.log("Apple sign-in initiated");
       await new Promise((resolve) => setTimeout(resolve, 1500));
     } catch (error) {
