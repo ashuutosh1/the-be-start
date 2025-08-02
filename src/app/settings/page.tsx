@@ -24,7 +24,7 @@ export default function SettingPage() {
         setIsLoggingOut(true);
         try {
             await signOut(auth);
-            router.push('/LandingPage');
+            router.push('/');
         } catch (error) {
             console.error('Logout error:', error);
         } finally {
