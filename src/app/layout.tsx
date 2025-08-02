@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { HashtagProvider } from '@/contexts/HashtagContext';
+import { AuthProvider } from '@/contexts/AuthContext';
 
 
 
@@ -28,13 +29,15 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className}`}>
 
-        <HashtagProvider>
-          <div className="bg-white dark:bg-black transition-colors min-h-screen">
-            <div className="fixed top-4 right-4 z-50">
+        <AuthProvider>
+          <HashtagProvider>
+            <div className="bg-white dark:bg-black transition-colors min-h-screen">
+              <div className="fixed top-4 right-4 z-50">
+              </div>
+              {children}
             </div>
-            {children}
-          </div>
-        </HashtagProvider>
+          </HashtagProvider>
+        </AuthProvider>
 
       </body>
     </html>

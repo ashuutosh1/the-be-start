@@ -1,39 +1,41 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Footer from "./components/Footer";
 import { useRouter } from 'next/navigation';
+import { auth, googleProvider, signInWithPopup } from '@/lib/firebase';
+import { useAuth } from '@/contexts/AuthContext';
 
 function LandingPage() {
-
   const router = useRouter();
+  const { user, loading } = useAuth();
   const [isLoading, setIsLoading] = useState<"google" | "apple" | null>(null);
 
+  useEffect(() => {
+    if (user && !loading) {
+      router.push('/home');
+    }
+  }, [user, loading, router]);
+
   const handleGoogleSignIn = async () => {
-    router.push('/home');
-    // setIsLoading("google");
-    // try {
-
-    //   console.log("Google sign-in initiated");
-
-
-    //   await new Promise((resolve) => setTimeout(resolve, 1500));
-    // } catch (error) {
-    //   console.error("Google sign-in error:", error);
-    // } finally {
-    //   setIsLoading(null);
-    // }
+    setIsLoading("google");
+    try {
+      const result = await signInWithPopup(auth, googleProvider);
+      console.log("Google sign-in successful:", result.user);
+      // Navigation will be handled by useEffect when user state changes
+    } catch (error) {
+      console.error("Google sign-in error:", error);
+      setIsLoading(null);
+    }
   };
 
   const handleAppleSignIn = async () => {
     setIsLoading("apple");
     try {
-      // Implement Apple OAuth here
-      // Example: await signInWithApple()
+      // Apple Sign-In would require additional setup
+      // For now, showing placeholder
       console.log("Apple sign-in initiated");
-
-      // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 1500));
     } catch (error) {
       console.error("Apple sign-in error:", error);
@@ -41,6 +43,14 @@ function LandingPage() {
       setIsLoading(null);
     }
   };
+
+  if (loading) {
+    return (
+      <div className="w-full bg-gradient-to-br from-gray-900 via-black to-gray-800 min-h-screen flex items-center justify-center">
+        <div className="w-8 h-8 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="w-full bg-gradient-to-br from-gray-900 via-black to-gray-800 min-h-screen">

@@ -1,5 +1,9 @@
 'use client';
 import Sidebar from '@/components/sidebar/page';
+import { useAuth } from '@/contexts/AuthContext';
+import { auth, signOut } from '@/lib/firebase';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
 // In a real app, you'd import icons from a library like heroicons
 import {
@@ -7,10 +11,27 @@ import {
     ShieldCheckIcon,
     BellIcon,
     SunIcon,
-    AtSymbolIcon
+    AtSymbolIcon,
+    ArrowRightOnRectangleIcon
 } from '@heroicons/react/24/outline';
 
 export default function SettingPage() {
+    const { user } = useAuth();
+    const router = useRouter();
+    const [isLoggingOut, setIsLoggingOut] = useState(false);
+
+    const handleLogout = async () => {
+        setIsLoggingOut(true);
+        try {
+            await signOut(auth);
+            router.push('/LandingPage');
+        } catch (error) {
+            console.error('Logout error:', error);
+        } finally {
+            setIsLoggingOut(false);
+        }
+    };
+
     return (
         <div className="min-h-screen bg-white dark:bg-black">
             <div className="max-w-7xl mx-auto pr-72">
@@ -35,6 +56,13 @@ export default function SettingPage() {
                                     Account Information
                                 </h2>
                                 <div className="space-y-5 pl-9">
+                                    {/* Current User Email Display */}
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 pb-2">Email</label>
+                                        <div className="text-sm text-gray-600 dark:text-gray-400 bg-gray-50 dark:bg-gray-900 p-3 rounded-md border border-gray-300 dark:border-gray-700">
+                                            {user?.email || 'Not available'}
+                                        </div>
+                                    </div>
                                     {/* Username Input */}
                                     <div className=''>
                                         <label htmlFor="username" className="block text-sm font-medium text-gray-700 dark:text-gray-300 pb-6">Username</label>
@@ -125,6 +153,42 @@ export default function SettingPage() {
 
                             <hr className="border-gray-200 dark:border-gray-800" />
 
+
+                            <hr className="border-gray-200 dark:border-gray-800" />
+
+                            {/* Section: Account Management */}
+                            <section className="space-y-6">
+                                <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200 flex items-center">
+                                    <ArrowRightOnRectangleIcon className="w-6 h-6 mr-3 text-gray-500" />
+                                    Account Management
+                                </h2>
+                                <div className="space-y-5 pl-9">
+                                    {/* Logout Button */}
+                                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
+                                        <div>
+                                            <h3 className="font-medium text-gray-900 dark:text-gray-100">Sign Out</h3>
+                                            <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">Sign out of your account on this device.</p>
+                                        </div>
+                                        <button
+                                            onClick={handleLogout}
+                                            disabled={isLoggingOut}
+                                            className="mt-3 sm:mt-0 sm:ml-4 w-full sm:w-auto rounded-md bg-gray-900 dark:bg-gray-100 px-4 py-2 text-sm font-semibold text-white dark:text-gray-900 shadow-sm hover:bg-gray-700 dark:hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap flex items-center justify-center space-x-2"
+                                        >
+                                            {isLoggingOut ? (
+                                                <>
+                                                    <div className="w-4 h-4 border-2 border-white dark:border-gray-900 border-t-transparent rounded-full animate-spin"></div>
+                                                    <span>Signing Out...</span>
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <ArrowRightOnRectangleIcon className="w-4 h-4" />
+                                                    <span>Sign Out</span>
+                                                </>
+                                            )}
+                                        </button>
+                                    </div>
+                                </div>
+                            </section>
 
                             <hr className="border-gray-200 dark:border-gray-800" />
 
